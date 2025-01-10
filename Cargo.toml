@@ -1,19 +1,32 @@
 [package]
 name = "auto-role-bot"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
-anyhow = "1.0.86"
-colored = "2.1.0"
+anyhow = "1.0.95"
+colored = "3.0.0"
 log = "0.4.22"
 parking_lot = "0.12.3"
 poise = "0.6.1"
-reqwest = { default-features = false, features = [
-    "rustls-tls",
-], version = "0.12.7" }
-serde = "1.0.209"
-serde_json = "1.0.127"
-sqlx = { version = "0.8.1", features = ["runtime-tokio-rustls", "sqlite"] }
-time = { version = "0.3.36", features = ["formatting"] }
-tokio = { version = "1.39.3", features = ["full"] }
+reqwest = { 
+    version = "0.12.12", 
+    default-features = false, 
+    features = [
+        "rustls-tls",
+    ] 
+}
+serde = "1.0.217"
+serde_json = "1.0.135"
+sqlx = { 
+    version = "0.8.3", 
+    features = ["runtime-tokio", "tls-rustls", "sqlite"] 
+}
+time = { 
+    version = "0.3.37", 
+    features = ["formatting"] 
+}
+tokio = { 
+    version = "1.43.0", 
+    features = ["full"] 
+}
